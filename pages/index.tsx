@@ -1,3 +1,28 @@
+import styles from "@/styles/Home.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import Head from "next/head";
+
+export default function Home(): JSX.Element {
+  return (
+    <>
+      <Head>
+        <title>หน้าแรก ร้านค้าออนไลน์</title>
+        <meta name="keywords" content="storeonline,travel,streetfood,souvenir"/>
+      </Head>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Home Page</h1>
+        <Image src="/data-store.jpg" width={400} height={300} alt="logo" priority/>
+        <p>ยินดีต้อนรับสู่ร้านค้าออนไลน์</p>
+        <Link href="/products" className={styles.btn}>
+          ชมสินค้าทั้งหมด
+        </Link>
+      </div>
+    </>
+  );
+}
+
+/*
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
@@ -5,8 +30,8 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
-  return (
+
+
     <>
       <Head>
         <title>Create Next App</title>
@@ -119,5 +144,4 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
-}
+ */
